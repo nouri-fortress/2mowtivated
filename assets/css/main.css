@@ -1,0 +1,79 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 64px; /* space for sticky mobile CTA bar */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile nav drawer */
+#mobile-menu {
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#mobile-menu.open {
+  max-height: 480px;
+  opacity: 1;
+}
+
+/* Sticky mobile action bar */
+#mobile-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+
+@media (min-width: 768px) {
+  #mobile-cta-bar {
+    display: none;
+  }
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #FFC20E;
+  outline-offset: 2px;
+}
+
+/* Simple fade-up entrance for sections */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Before/after placeholder texture */
+.placeholder-grass {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(14, 59, 38, 0.06),
+    rgba(14, 59, 38, 0.06) 10px,
+    rgba(141, 198, 63, 0.1) 10px,
+    rgba(141, 198, 63, 0.1) 20px
+  );
+}
