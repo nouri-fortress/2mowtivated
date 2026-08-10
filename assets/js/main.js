@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var quoteForm = document.getElementById('quote-form');
   if (quoteForm) {
     quoteForm.addEventListener('submit', function (e) {
-      var honeypot = quoteForm.querySelector('input[name="bot-field"]');
+      var honeypot = quoteForm.querySelector('input[name="_honeypot"]');
       if (honeypot && honeypot.value) {
         e.preventDefault();
       }

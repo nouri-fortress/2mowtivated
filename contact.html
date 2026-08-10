@@ -80,10 +80,13 @@
             <h2 class="font-heading font-bold text-2xl text-forest-700 mb-1">Request a Commercial Quote</h2>
             <p class="text-charcoal-600 text-sm mb-8">Fields marked * are required. Everyone else, we'll still get back to you the same business day.</p>
 
-            <form id="quote-form" name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html" enctype="multipart/form-data" class="space-y-6">
-              <input type="hidden" name="form-name" value="quote-request" />
+            <form id="quote-form" name="quote-request" method="POST" action="https://formsubmit.co/info@2mowtivated.com.au" enctype="multipart/form-data" class="space-y-6">
+              <input type="hidden" name="_subject" value="New Commercial Quote Request - 2mowtivated Website" />
+              <input type="hidden" name="_next" value="https://2mowtivated.com.au/thank-you.html" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <p class="hidden" aria-hidden="true">
-                <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+                <label>Don't fill this out if you're human: <input name="_honeypot" tabindex="-1" autocomplete="off" /></label>
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
